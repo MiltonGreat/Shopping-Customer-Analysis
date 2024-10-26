@@ -19,41 +19,38 @@ The dataset contains information on customer demographics, purchase behavior, an
 
 #### 3. Data Cleaning Steps
 
-- Handling Missing Values: Non-numeric values in the Frequency of Purchases column were converted to numeric, and missing values were imputed with the column mean.
-- Outlier Detection and Correction: Outliers in the Age and Purchase Amount (USD) columns were identified using z-scores and corrected by replacing them with the column mean to ensure a more accurate dataset.
-- Standardizing Data: The Gender and Item Purchased columns were cleaned by converting values to lowercase and correcting common spelling mistakes.
-- Removing Duplicates: Duplicate records were removed to ensure unique and accurate entries.
+- Handling Missing Values
+- Outlier Detection and Handling
+- Standardizing Categorical Values
+- Handling Duplicates
 
 #### 4. Exploratory Data Analysis (EDA)
 
-Data Distribution: Histograms were generated to visualize the distribution of key numerical columns, such as Age, Purchase Amount (USD), and Review Rating. The data reveals that most customers are within the middle age range, and purchase amounts are centered around common price points.
+- Summary Statistics: It generated summary statistics for numerical columns to understand basic trends in age, purchase amount, previous purchases, and review ratings.
 
-Correlation Analysis: A heatmap shows the correlations between numerical variables. For example, there may be a correlation between Purchase Amount and Review Rating or Previous Purchases.
-
-Item Popularity: The most purchased items include blouses, sweaters, jeans, and shoes, as shown by the frequency distribution. These items were the most popular across the dataset. The average purchase amount for each item was also analyzed, with certain high-end items showing significantly higher average prices.
+- Unique Value Checks for Categorical Variables: It printed unique values in categorical columns like Gender, Item Purchased, Category, etc., to verify the integrity and consistency of the data.
 
 #### 5. Data Visualization
 
 - Histograms of numerical columns
-- Correlation heatmap for numerical variables
+- Box Plots show distribution of purchase amounts by gender and subscription status, revealing patterns of spending behavior
 - Count plots for categorical columns like Gender, Item Purchased, Category
-- Bar plots for the most purchased items and the average purchase amount for each item.
+- Bar plots for the most purchased items and the average purchase amount for each item
+- Pair plots were used to visualize relationships between multiple numerical variables
 
 #### 7. Key Findings
       
-Handling Missing Values: Non-numeric values were found in the Frequency of Purchases column. These values (e.g., "Fortnightly", "Annually") were replaced with the mean value of the column after converting them to numeric data, ensuring consistent numerical analysis. Missing values in the dataset were handled by imputing them with the mean for numeric columns and correcting categorical data.
+Customer Demographics: The average age of customers across different categories is quite similar, with values around 44 years. The Footwear category has the highest average customer age, while Clothing has the lowest.
 
-Outliers in Age and Purchase Amount: Outliers in the Age and Purchase Amount (USD) columns were identified and corrected. These outliers were likely due to data entry errors or extreme values that would distort the overall analysis. By replacing them with the column mean, the dataset was normalized for more accurate insights.
+Most Popular Items by Season: The most popular items vary by season. For instance, jackets are most popular in fall, sweaters in spring, pants in summer, and sunglasses in winter.
 
-Data Standardization: Spelling mistakes and inconsistent formatting were identified and corrected in the Gender and Item Purchased columns. This step helped standardize the dataset, ensuring consistent analysis of categorical variables.
+Purchasing Behavior: The analysis of the most purchased items revealed the top 10 most frequently bought products, while additional plots showed that the average purchase amount varies significantly depending on the item and the season.
 
-Data Distribution: The histograms of numerical columns show the distribution of values in Age, Purchase Amount (USD), Review Rating, and Previous Purchases. For example: Most customers tend to be in the middle age range, with fewer younger and older customers.
+Seasonal Trends: Purchases peak in certain seasons, with significant differences in the types of items bought across seasons. Winter and fall are seasons where jackets and sunglasses are more commonly purchased, while pants dominate summer.
 
-Correlation Between Variables: There may be a correlation between Purchase Amount (USD) and Review Rating or Previous Purchases.
+Payment Methods: Credit cards, PayPal, and bank transfers are the most common payment methods, suggesting a mix of traditional and online payment preferences among customers.
 
-Item Popularity: The most purchased items include categories like blouses, sweaters, jeans, and shoes. These items are frequently purchased, and their frequency distribution was visualized using a bar plot. The analysis also shows the average purchase amount for each item, with some high-end items having significantly higher average prices compared to others.
-
-Customer Trends: Insights into customer behavior, such as purchase frequency and preferred payment methods, can be derived from the cleaned dataset. For example: Customers who frequently purchase tend to use payment methods like Venmo or Credit Card, while less frequent shoppers may prefer Cash or Bank Transfer.
+Promo Code Usage: The distribution of promo code usage and discounts applied suggests that customers frequently take advantage of promotions, which is further analyzed by comparing purchase amounts with and without promo codes.
 
 #### 8.  Source
 
